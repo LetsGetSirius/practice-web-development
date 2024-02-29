@@ -1,0 +1,187 @@
+/* Body */
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #5f692e;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    text-transform: uppercase;
+    cursor: pointer;
+    top: 0;
+    z-index: 1;
+    border-radius: 10px;
+    width: 100%; /* Adjust the width as needed */
+}
+
+/* Nav Dropdown Icon */
+.box {
+    position: relative;
+}
+
+.nav-dropdown-icon {
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar Links */
+nav a.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px; /* Adjust the margin as needed for equal spacing */
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+    position: relative;
+}
+
+nav a.navbar-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	right: 0;
+	margin: auto;
+    width: 0;
+    height: 3px; /* Adjust the height of the lava lamp effect */
+    background-color: #fff; /* Adjust the color of the lava lamp effect */
+    transition: width 0.3s ease;
+}
+
+nav a.navbar-link:hover::after,
+.submenu:hover + .navbar a.navbar-link::after {
+    width: 100%;
+	left:0;
+}
+
+nav a.navbar-link:hover {
+    background-color: #4a5325;
+}
+
+
+
+/* Submenu */
+.submenu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content; /* Set width to match the navbar width */
+    background-color: #273813;
+    z-index: 2;
+    text-align: center; /* Adjust text alignment */
+    border-radius: 0;
+}
+
+/* Display submenu when the parent (.box) is hovered */
+.box:hover .submenu {
+    display: block;
+}
+
+/* Submenu Links */
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    padding: 8px 15px;
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: #4a5325;
+    text-decoration: none;
+}
+
+/* Exclude lavalamp effect for submenu options */
+.submenu a.submenu-link::after {
+    display: none;
+}
+
+.submenu:hover ~ .navbar a.navbar-link::after {
+    width: 100%;
+}
+
+/* Map Container */
+.map-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Donate Button */
+nav a.donate::before {
+    content: '\1F90D'; /* Unicode for heart emoji */
+    margin-left: 5px;
+}
+
+nav a.donate {
+    font-weight: bold;
+    position: relative;
+    background-color: red; /* Change to your desired highlight color */
+    color: white; /* Text color */
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+nav a.donate:hover {
+    background-color: darkred; /* Change to your desired highlight color on hover */
+}
+
+/* Custom Map */
+.custom-map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Contact Info */
+.contact-info {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Content */
+.content {
+    width: 80%;
+    margin: auto;
+    margin-top: 6%;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 5%;
+    overflow: hidden;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: #bcc5b8;
+}
